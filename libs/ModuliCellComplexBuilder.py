@@ -103,7 +103,3 @@ class ModuliCellComplexBuilder:
             boundary_cells=self.boundary_cell_dict,
             global_isotropy_order=global_isotropy_order,
         )
-
-
-# Backwards-compatible name used by the original scripts.
-PolyComplexSolver = ModuliCellComplexBuilder

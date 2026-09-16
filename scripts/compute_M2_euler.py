@@ -9,7 +9,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 from data.DFVdata import D_raw, F_raw, V_raw
 from libs.DFV import DFV
 from libs.Functions import poly
-from libs.PolyComplexSolver import ModuliCellComplexBuilder
+from libs.ModuliCellComplexBuilder import ModuliCellComplexBuilder
 
 
 def genus2_top_cells():
