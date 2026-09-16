@@ -1,4 +1,10 @@
-from sage.rings.rational_field import QQ
+from sage.all import QQ
+
+from pathlib import Path
+import sys
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(PROJECT_ROOT))
 
 from data.DFVdata import D_raw, F_raw, V_raw
 from libs.DFV import DFV

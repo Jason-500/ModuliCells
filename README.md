@@ -14,7 +14,7 @@ types and construct the corresponding polyhedral cells.
 
 ## Mathematical Background
 
-See [needs to be filled...]
+See https://kc.sustech.edu.cn/handle/2SGJ60CL/964535.
 
 ## Features
 
@@ -30,6 +30,10 @@ Implemented:
 
 ✓ Orbifold Euler characteristic computation
 
+## Usage
+
+
+
 ## Example
 
 For genus 2, the program reconstructs the cell complex and obtains
@@ -43,24 +47,3 @@ Taking into account the universal hyperelliptic involution:
 $$ \chi_{orb}(M_2) = -1/240 $$
 
 which agrees with the Harer-Zagier formula.
-
-## Current limitation
-
-The current implementation describes the unmarked moduli problem
-through Weierstrass data.
-
-Mapping class group actions invisible to the Weierstrass model
-(e.g. the hyperelliptic kernel) are not represented internally
-and must be accounted for separately.
-
-## Future directions
-
-Future extensions:
-
-- Ribbon graph based decompositions for $M_g$, $g \geq 3$
-
-- Mapping class group quotient structures
-
-- Morse theoretic analysis on moduli spaces
-
-- Comparison with Deligne-Mumford compactification
