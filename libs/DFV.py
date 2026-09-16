@@ -393,6 +393,10 @@ class DFV:
         self._planar_graph_automorphism_group = PermutationGroup(group_element_list)
         return self._planar_graph_automorphism_group
     
+    def automorphism_group(self):
+        """Return the effective orientation-preserving symmetry group of this cell."""
+        return self.planar_graph_automorphism_group()
+
     def get_equivalent_coordinates(self):
         """
         Get the equivalence between angle coordinates, labeled by edge labels.
@@ -410,15 +414,21 @@ class DFV:
 
         return equal_pairs
 
-    def stablizer(self):
-        """
-        Get the stablizer of the orientation preserving planar isomorphism group acting on the polyhedron.
-        """
-        element_list = [] # 首先确定稳定子群.
+    def pointwise_stabilizer(self):
+        """Return the subgroup acting trivially on the whole parameter cell."""
+        element_list = []
         for g in self.planar_graph_automorphism_group():
             if self.get_fixed_point_set(g).dim() == self.dim:
                 element_list.append(g)
         return PermutationGroup(element_list)
+
+    def stabilizer(self):
+        """Alias for :meth:`pointwise_stabilizer`."""
+        return self.pointwise_stabilizer()
+
+    def stablizer(self):
+        """Backward-compatible alias for the former misspelled method name."""
+        return self.pointwise_stabilizer()
 
     def get_fixed_point_set(self,g):
         edge_label_perm= get_edge_label_permutation(self,g)

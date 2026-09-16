@@ -30,6 +30,10 @@ Implemented:
 
 ✓ Orbifold Euler characteristic computation
 
+## Usage
+
+
+
 ## Example
 
 For genus 2, the program reconstructs the cell complex and obtains
@@ -43,4 +47,3 @@ Taking into account the universal hyperelliptic involution:
 $$ \chi_{orb}(M_2) = -1/240 $$
 
 which agrees with the Harer-Zagier formula.
-
