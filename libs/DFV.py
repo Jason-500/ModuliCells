@@ -422,14 +422,6 @@ class DFV:
                 element_list.append(g)
         return PermutationGroup(element_list)
 
-    def stabilizer(self):
-        """Alias for :meth:`pointwise_stabilizer`."""
-        return self.pointwise_stabilizer()
-
-    def stablizer(self):
-        """Backward-compatible alias for the former misspelled method name."""
-        return self.pointwise_stabilizer()
-
     def get_fixed_point_set(self,g):
         edge_label_perm= get_edge_label_permutation(self,g)
         orbits = orbits_of_perm(edge_label_perm,self.edge_labels)
